@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ShoppingAPI.Models.Dto.Product;
 
 namespace ShoppingAPI.Models.Dto.Category
 {
@@ -6,7 +6,7 @@ namespace ShoppingAPI.Models.Dto.Category
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public string? Description { get; set; }
+        public ICollection<ProductDto> Products { get; set; }
     }
 }

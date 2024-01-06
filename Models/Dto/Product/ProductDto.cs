@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using ShoppingAPI.Models.Dto.Category;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ShoppingAPI.Models
+namespace ShoppingAPI.Models.Dto.Product
 {
-    public class Product
+    public class ProductDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -11,7 +12,7 @@ namespace ShoppingAPI.Models
         public decimal Price { get; set; }
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
-        public ICollection<Image> Images { get; set; }
+        public CategoryDto Category { get; set; }
+        public ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
